@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Con Firebase</title>
+    <!-- Link CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!--Link CSS de Toast para notificaciones   -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    Estilos Propios de CSS
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">FireApp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item logged-out">
+                        <a class="nav-link " href="#" data-bs-toggle="modal"data-bs-target="#SingInModal">SingIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#SingUpModal">SingUp</a>
+                    </li>    
+                    <li class="nav-item">
+                        <a class="nav-link logged-in" href="#" id="logout">LogOut</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--SingIn Modal -->
+    <div class="modal fade" id="SingInModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close" ></button>
+                </div>
+                <div class="modal-body">
+
+                    <form id="login-form">
+                        <label for="email">Email:</label>
+                        <input type="email" id="login-email" class="form-control mb-3" placeholder="Ingresa tu email" required></input>
+                        <label for="password">Pasword:</label>
+                        <input type="password" id="login-password" class="form-control mb-3" placeholder="Ingresa tu contraseña" required></input>
+                        <button type="submit" class="btn btn-primary w-100 mb-4"> Login </button>
+                    </form>
+
+                    <button type="button" id="googleLogin" class="btn btn-info">
+                        Google
+                    </button>
+
+                    <button type="button" id="facebookLogin" class="btn btn-primary">
+                        facebook
+                    </button>
+
+                    <button type="button" id="githubLogin" class="btn btn-danger">
+                        GitHub
+                    </button>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-6offset-md-3">
+                <ul class="list-group posts">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!--SingUp Modal -->
+    <div class="modal fade" id="SingUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SingUp</h5>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+         <form id="singup-form">
+             <label for="email">Email:</label>
+             <input type="email" id="singup-email" class="form-control mb-3" placeholder="Ingresa tu email"required></input>
+             <label for="password">Pasword:</label>
+             <input type="password" id="singup-password" class=" form-control mb-3" placeholder="Ingresa tu contraseña" required></input>
+             <button type="submit" class="btn btn-danger"> Register </button>         
+        </form>
+
+                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Code de js propio -->
+    <script src="main.js" type="module"></script>
+    <!-- Code de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--Code de Toastify   -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</script>
+</body>
+</html>
